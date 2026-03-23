@@ -51,8 +51,8 @@ If the header is missing, route through `docs/execution/task-routing.md`.
 - `spec_pack.md` is the canonical feature artifact.
 - `reinforcement.md` is mandatory for non-trivial work.
 - a task-specific Markdown artifact is required before final closeout: `verification.md` for `implement`, `fix`, `docs`, and `hotfix`; `review.md` for `review`; `audit.md` for `audit`
-- use `docs/structure.md` for task-folder naming and artifact placement
-- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial]` before final closeout when the task has a governed folder
+- use `docs/structure.md` for canonical date-first task-folder naming, lifecycle rules, and artifact placement
+- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial] [--strict]` before final closeout when the task has a governed folder
 - Do not guess unresolved behavior, contracts, schema rules, validation rules, or rollout behavior.
 - Preserve approved API, DTO, file, DB, auth, tenant, and response contracts unless `spec_pack.md` explicitly changes them.
 - Keep task artifacts grounded to `spec_pack.md`; use `verification.md` for acceptance coverage on change-making tasks and `review.md` or `audit.md` for findings-only traceability.
