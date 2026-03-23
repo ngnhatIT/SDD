@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: SPPM00061 Search API
+  version: 1.0.0
+  description: Example contract for the additive expired-only filter change.
+paths:
+  /webapi/sppm00061/search:
+    post:
+      summary: Search attachment rows for SPPM00061
+      operationId: sppm00061Search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ./schemas/sppm00061-search-request.schema.json
+      responses:
+        '200':
+          description: Search result list
+          content:
+            application/json:
+              schema:
+                $ref: ./schemas/sppm00061-search-response.schema.json

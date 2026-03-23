@@ -1,0 +1,18 @@
+openapi: 3.0.1
+info:
+  title: Fixture Export API
+  version: "1.0.0"
+paths:
+  /webapi/fixture/export:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ./schemas/fixture-export-request.schema.json
+      responses:
+        "200":
+          description: CSV export response
+        "400":
+          description: Invalid request

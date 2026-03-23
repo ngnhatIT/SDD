@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "customer-export-audit.schema.json",
+  "title": "CustomerExportAudit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "export_audit_id",
+    "company_id",
+    "user_id",
+    "screen_id",
+    "requested_at",
+    "filter_summary_json",
+    "sort_field",
+    "sort_direction",
+    "row_count",
+    "result_status"
+  ],
+  "properties": {
+    "export_audit_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "company_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "user_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "screen_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "filter_summary_json": {
+      "type": "string",
+      "minLength": 2
+    },
+    "sort_field": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "sort_direction": {
+      "type": "string",
+      "enum": [
+        "ASC",
+        "DESC"
+      ]
+    },
+    "row_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result_status": {
+      "type": "string",
+      "enum": [
+        "SUCCESS",
+        "FAILED"
+      ]
+    },
+    "error_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 50
+    },
+    "file_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "customer-search-export-request.schema.json",
+  "title": "CustomerSearchExportRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sortField",
+    "sortDirection"
+  ],
+  "properties": {
+    "customerCodeFrom": {
+      "type": "string",
+      "minLength": 1
+    },
+    "customerCodeTo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "customerName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "assignedRepId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lastContactFrom": {
+      "type": "string",
+      "format": "date"
+    },
+    "lastContactTo": {
+      "type": "string",
+      "format": "date"
+    },
+    "sortField": {
+      "type": "string",
+      "enum": [
+        "customerCode",
+        "customerName",
+        "status",
+        "assignedRepId",
+        "lastContactDate"
+      ]
+    },
+    "sortDirection": {
+      "type": "string",
+      "enum": [
+        "ASC",
+        "DESC"
+      ]
+    }
+  }
+}

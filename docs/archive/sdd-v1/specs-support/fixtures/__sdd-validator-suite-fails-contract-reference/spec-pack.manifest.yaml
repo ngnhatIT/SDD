@@ -1,0 +1,31 @@
+feature_id: fixture-valid-full-path
+title: Full path validator fixture
+status: ready-for-implementation
+feature_root: docs/specs-support/fixtures/__sdd-validator-suite-fails-contract-reference
+output: docs/spec-packs/__sdd-validator-suite-fails-contract-reference.pack.md
+entrypoints:
+  - AGENTS.md
+context:
+  - docs/sdd/context/constitution.md
+  - docs/sdd/context/note.md
+  - docs/sdd/context/architecture-context.md
+  - docs/sdd/context/product-context.md
+  - docs/sdd/context/tech-context.md
+standards:
+  - docs/sdd/standards/repository-context.md
+specs:
+  - README.md
+  - 01-requirements.md
+  - 02-design.md
+  - 03-data-model.md
+  - 04-api-contract.md
+  - 05-behavior.md
+  - 06-edge-cases.md
+  - 07-tasks.md
+  - 08-acceptance-criteria.md
+  - 09-test-cases.md
+contracts:
+  - contracts/openapi.yaml
+  - contracts/schemas/fixture-export-request.schema.json
+assumptions:
+  - The fixture contract files are test-only artifacts.

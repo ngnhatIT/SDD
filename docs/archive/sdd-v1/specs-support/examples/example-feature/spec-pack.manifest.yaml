@@ -1,0 +1,41 @@
+feature_id: example-feature
+title: SPPM00061 expired-file filter with search and export parity
+status: ready-for-implementation
+feature_root: docs/specs-support/examples/example-feature
+output: docs/spec-packs/example-feature.pack.md
+entrypoints:
+  - AGENTS.md
+context:
+  - docs/sdd/context/constitution.md
+  - docs/sdd/context/note.md
+  - docs/sdd/context/architecture-context.md
+  - docs/sdd/context/product-context.md
+  - docs/sdd/context/tech-context.md
+standards:
+  - docs/sdd/standards/repository-context.md
+  - docs/sdd/standards/backend-process-architecture.md
+  - docs/sdd/standards/frontend-screen-architecture.md
+  - docs/sdd/standards/database-change-rules.md
+  - docs/sdd/standards/module-patterns/search.md
+  - docs/sdd/standards/module-patterns/csv.md
+  - docs/sdd/standards/security-validation-and-logging.md
+specs:
+  - README.md
+  - 01-requirements.md
+  - 02-design.md
+  - 03-data-model.md
+  - 04-api-contract.md
+  - 05-behavior.md
+  - 06-edge-cases.md
+  - 07-tasks.md
+  - 08-acceptance-criteria.md
+  - 09-test-cases.md
+contracts:
+  - contracts/openapi.yaml
+  - contracts/schemas/sppm00061-search-request.schema.json
+  - contracts/schemas/sppm00061-search-response.schema.json
+assumptions:
+  - The example package documents an approved change pattern and does not claim that the feature is implemented in production code.
+  - Existing expiry-related fields already exist in the `SPPM00061` search family; the example focuses on the new filter and parity rules.
+legacy_refs:
+  - agent/START_HERE.md

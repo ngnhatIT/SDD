@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/specs-support/examples/example-feature/contracts/schemas/sppm00061-search-request.schema.json",
+  "title": "SPPM00061 Search Request",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "companyCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storeCode": {
+      "type": "string"
+    },
+    "fileName": {
+      "type": "string"
+    },
+    "pageNum": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dispNum": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "expiredOnly": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "companyCode",
+    "pageNum",
+    "dispNum"
+  ]
+}

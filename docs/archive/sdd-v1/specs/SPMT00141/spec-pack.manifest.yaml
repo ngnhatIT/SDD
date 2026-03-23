@@ -1,0 +1,34 @@
+feature_id: SPMT00141
+title: SPMT00141 procurement product master change package
+status: blocked
+feature_root: docs/specs/SPMT00141
+output: docs/spec-packs/SPMT00141.md
+entrypoints:
+  - AGENTS.md
+context:
+  - docs/sdd/context/constitution.md
+  - docs/sdd/context/note.md
+  - docs/sdd/context/architecture-context.md
+  - docs/sdd/context/product-context.md
+  - docs/sdd/context/tech-context.md
+standards:
+  - docs/sdd/standards/repository-context.md
+  - docs/sdd/standards/backend-process-architecture.md
+  - docs/sdd/standards/frontend-screen-architecture.md
+specs:
+  - README.md
+  - 01-requirements.md
+  - 02-design.md
+  - 03-data-model.md
+  - 04-api-contract.md
+  - 05-behavior.md
+  - 06-edge-cases.md
+  - 07-tasks.md
+  - 08-acceptance-criteria.md
+  - 09-test-cases.md
+  - 10-rollout.md
+assumptions:
+  - The generated execution aid for this feature remains docs/spec-packs/SPMT00141.md.
+  - This package intentionally records the unresolved schema authority conflict instead of inventing database structure.
+legacy_refs:
+  - docs/spec-packs/SPMT00141.md

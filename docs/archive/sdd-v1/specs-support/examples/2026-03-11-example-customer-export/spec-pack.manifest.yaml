@@ -1,0 +1,40 @@
+feature_id: 2026-03-11-example-customer-export
+title: Example customer search CSV export with audit logging
+status: done
+feature_root: docs/specs-support/examples/2026-03-11-example-customer-export
+output: docs/spec-packs/2026-03-11-example-customer-export.pack.md
+entrypoints:
+  - AGENTS.md
+context:
+  - docs/sdd/context/constitution.md
+  - docs/sdd/context/note.md
+  - docs/sdd/context/architecture-context.md
+  - docs/sdd/context/product-context.md
+  - docs/sdd/context/tech-context.md
+standards:
+  - docs/sdd/standards/repository-context.md
+  - docs/sdd/standards/backend-process-architecture.md
+  - docs/sdd/standards/frontend-screen-architecture.md
+  - docs/sdd/standards/database-change-rules.md
+  - docs/sdd/standards/module-patterns/csv.md
+specs:
+  - README.md
+  - 01-requirements.md
+  - 02-design.md
+  - 03-data-model.md
+  - 04-api-contract.md
+  - 05-behavior.md
+  - 06-edge-cases.md
+  - 07-tasks.md
+  - 08-acceptance-criteria.md
+  - 09-test-cases.md
+contracts:
+  - contracts/openapi.yaml
+  - contracts/schemas/customer-search-export-request.schema.json
+  - contracts/schemas/customer-export-audit.schema.json
+assumptions:
+  - OpenAPI is derived from 04-api-contract.md because this pilot is a documentation example, not a verified production endpoint implementation.
+  - JSON Schemas model request and audit data shape from 03-data-model.md and 04-api-contract.md, not database DDL extracted from code.
+legacy_refs:
+  - agent/START_HERE.md
+  - agent/spec-pack/README.md
