@@ -2,6 +2,7 @@
 
 - Status: in-progress | complete
 - Last Updated: YYYY-MM-DD
+- Code Modified: no
 
 ## 1. Scope And Basis
 
@@ -13,11 +14,16 @@
 
 - observed facts, findings, or `no findings`
 
-## 3. Follow-Up Or Residual Risks
+## 3. Compliance Status
+
+- `pass` | `fail` | `partial`
+- short reason
+
+## 4. Follow-Up Or Residual Risks
 
 - follow-up item, risk, or `none`
 
-## 4. Confidence
+## 5. Confidence
 
 - high | medium | low
 - short reason

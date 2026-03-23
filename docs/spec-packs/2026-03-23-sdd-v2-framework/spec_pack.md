@@ -157,4 +157,4 @@ An external tool now already generates `spec_pack`, so keeping `docs/specs/` as 
 
 - if any active doc still points to `docs/specs/` or `docs/sdd/` as canonical, the refactor is incomplete
 - if any active rule drops reinforcement for non-trivial work, stop and fix the framework before further use
-- shell validator replacement for v2 is intentionally deferred; archived v1 scripts are retained only as history
+- shell validator replacement for v2 was deferred in this change and is now addressed by `docs/spec-packs/2026-03-23-sdd-v2-4-upgrade/`; archived v1 scripts remain history only

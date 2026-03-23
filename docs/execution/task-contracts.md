@@ -14,20 +14,20 @@
 
 ## Review
 
-- input: feature pack, diff or code target, relevant standards
-- output: updated `review.md` with findings first, then open questions or residual risks
+- input: feature pack, diff or code target, relevant standards, `reinforcement.md` if non-trivial
+- output: updated `review.md` with findings first, then assumptions or uncertainties and residual risks
 - stop if intent cannot be grounded from the active pack or code
 
 ## Docs
 
-- input: affected active docs and any framework pack that governs the change
-- output: coherent doc updates plus updated `verification.md`
+- input: affected active docs, any framework pack that governs the change, and `reinforcement.md` when the work is non-trivial
+- output: coherent doc updates plus updated `verification.md`; when the work authors or revises a governed pack, `spec_pack.md` is part of the output
 - stop if the docs would create a second authority path
 
 ## Audit
 
-- input: target scope, active rules, inspected evidence, and a governed feature-pack home before closeout
-- output: updated `audit.md` with grounded report only
+- input: target scope, active rules, inspected evidence, `reinforcement.md` if non-trivial, and a governed feature-pack home before closeout
+- output: updated `audit.md` with grounded report only and an explicit no-code-modified statement
 - stop if the user has implicitly asked for implementation and the task is blocked on a missing pack
 
 ## Hotfix
@@ -42,6 +42,12 @@
 - use `verification.md` for `implement`, `fix`, `docs`, and `hotfix`
 - use `review.md` for `review`
 - use `audit.md` for `audit`
+
+## Structure And Validation
+
+- use `docs/structure.md` when creating, renaming, or validating a task folder
+- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial]` before closeout to check the minimum artifact set
+- the validator is a floor, not the full governance model
 
 ## Checklist Use
 

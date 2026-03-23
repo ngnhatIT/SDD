@@ -1,16 +1,21 @@
 # AI Loading Order
 
-## Default Order
+Token efficiency is a rule. Start at the lowest load level that keeps the next step defensible.
 
-1. `AGENTS.md`
-2. `docs/spec-packs/<feature-id>/spec_pack.md` when the task is feature-scoped
-3. this file
-4. `docs/execution/task-routing.md` when task type is unclear or no header is given
-5. `docs/governance/core-rules.md`
-6. `docs/governance/minimal-context.md`
-7. `docs/spec-packs/<feature-id>/reinforcement.md` for non-trivial work
-8. only the relevant files under `docs/standards/`
-9. the task-specific trace artifact under `docs/spec-packs/<feature-id>/`, such as `verification.md`, `review.md`, or `audit.md`, when resuming, reviewing, or closing
+## Load Levels
+
+| Load Level | Read | Use When |
+| --- | --- | --- |
+| `minimal` | `AGENTS.md`, `docs/spec-packs/<feature-id>/spec_pack.md` when feature-scoped, this file, `docs/governance/core-rules.md` | first-pass triage, narrow `review`, narrow `audit`, minor text-only `docs` fixes |
+| `extended` | `minimal` plus `docs/execution/task-routing.md` when the header is unclear, `docs/governance/minimal-context.md`, `docs/execution/task-contracts.md`, `docs/spec-packs/<feature-id>/reinforcement.md` for non-trivial work, `docs/structure.md` when creating or validating a task folder, only the touched standards | default for `implement`, `fix`, `docs`, and `hotfix`; multi-file `review`; governed spec-pack authoring |
+| `full` | `extended` plus the active task artifact (`verification.md`, `review.md`, or `audit.md`), related decisions, and targeted archived comparison only if active docs still leave a gap | framework changes, cross-module work, DB or API changes, ambiguous requests, or final closeout |
+
+## Task Map
+
+- `implement`, `fix`, `hotfix`: start at `extended`; move to `full` for framework, API, DB, or cross-module scope.
+- `docs`: start at `minimal` for wording-only edits; use `extended` for governed doc work; use `full` for framework-rule changes.
+- `review`: start at `minimal` for narrow diff review; use `extended` for multi-file or standards-heavy review; use `full` when findings depend on broader framework or contract rules.
+- `audit`: start at `minimal` for narrow inspection; use `extended` for multi-surface audit; use `full` for repo-wide or governance audits.
 
 ## Additional Reads By Risk
 
@@ -30,4 +35,4 @@
 
 ## Rule
 
-Do not reopen large archived surfaces by default. Use `docs/archive/sdd-v1/` only when the active pack and inspected code still leave a legacy gap.
+Do not reopen large archived surfaces by default. Use `docs/archive/sdd-v1/` only when the active pack, active docs, and inspected code still leave a legacy gap.

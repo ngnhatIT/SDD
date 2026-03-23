@@ -42,7 +42,7 @@
 ### FR-03 Review Tasks Create Review Artifact
 
 - `review` must create or update `docs/spec-packs/<feature-id>/review.md`
-- `review.md` must capture findings first, then open questions and residual risks
+- `review.md` must capture findings first, then assumptions or uncertainties and residual risks
 
 ### FR-04 Audit Tasks Create Audit Artifact
 

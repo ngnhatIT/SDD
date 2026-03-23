@@ -3,25 +3,29 @@
 - Status: in-progress | complete
 - Last Updated: YYYY-MM-DD
 
-## 1. Review Basis
+## 1. Scope Reviewed
 
 - feature pack or scoped target
 - diff, file set, or code path reviewed
 - standards or rules applied
 
-## 2. Findings
+## 2. Files Inspected
+
+- path or `none`
+
+## 3. Findings
 
 - `none` or findings listed from highest severity first
 
-## 3. Open Questions
+## 4. Assumptions Or Uncertainties
 
-- unresolved question or `none`
+- assumption, uncertainty, or `none`
 
-## 4. Residual Risks
+## 5. Residual Risks
 
 - remaining risk or `none`
 
-## 5. Confidence
+## 6. Confidence
 
 - high | medium | low
 - short reason

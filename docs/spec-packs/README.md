@@ -1,16 +1,8 @@
 # Spec Packs
 
-Each active governed work item lives under:
+Each active governed work item lives under `docs/spec-packs/<feature-id>/`.
 
-```text
-docs/spec-packs/<feature-id>/
-  spec_pack.md
-  reinforcement.md
-  verification.md
-  review.md      # required for Task Type: review
-  audit.md       # required for Task Type: audit
-  decisions.md  # optional
-```
+Use `../structure.md` for the layout, naming, and task-type file contract.
 
 ## Rules
 
@@ -21,6 +13,7 @@ docs/spec-packs/<feature-id>/
 - `audit.md` is required before final closeout for `audit`.
 - `decisions.md` is optional unless the feature has local design choices worth preserving.
 - if a governed task does not already have a feature-pack home for its required artifact, create or identify one before closing the work.
+- run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial]` before closeout to check the minimum artifact set.
 
 ## Legacy
 
