@@ -3,6 +3,10 @@
 - Status: draft | approved | implemented
 - Owner: <team-or-person>
 - Last Updated: YYYY-MM-DD
+- Related ADRs: `none` | `docs/decisions/ADR-XXXX-<slug>.md`
+- Companion Function Specs: `none` | `function-specs/<function-id>.<type>.md`
+
+Use this template to govern the work item. When one delivery surface needs implementation-facing detail, add the matching companion function spec instead of stretching this pack into a universal template.
 
 ## 1. Context
 
@@ -41,6 +45,7 @@
 - touched modules
 - preserved contracts
 - data, API, or UI notes
+- companion function specs when needed
 
 ## 5. Decisions And Constraints
 

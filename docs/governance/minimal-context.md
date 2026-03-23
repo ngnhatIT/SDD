@@ -16,6 +16,9 @@ Load only what is needed for the next safe step.
 - `docs/execution/task-contracts.md` when deciding required outputs
 - `docs/structure.md` when creating, validating, or closing a task folder
 - `docs/governance/minimal-quality.md` when authoring or validating governed artifacts
+- `docs/templates/README.md` and the matching function-spec template when authoring or reviewing screen or module, API or service, batch or job, or report or import or export detail
+- `docs/governance/traceability-policy.md` when authoring or reviewing traceability beyond the pack summary
+- `docs/decisions/README.md` and `docs/templates/adr.template.md` when the work may create or revise a repository ADR
 - `docs/standards/coding-rules.md` for code changes
 - `docs/standards/api-rules.md` for API, DTO, response, or file-shape changes
 - `docs/standards/db-rules.md` and `docs/standards/schema_database.yaml` for DB-related work
@@ -30,6 +33,7 @@ Deepen immediately when:
 - the task spans multiple module families
 - the correct local pattern is not obvious
 - the request wording conflicts with the pack or code
+- reviewers cannot trace request -> spec -> code -> evidence from the current artifacts
 - you are about to close the work out
 
 ## Guardrail

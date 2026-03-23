@@ -22,7 +22,9 @@
 - `docs/structure.md` is the task-folder naming, lifecycle, and artifact-placement contract.
 - Do not guess missing behavior, schema facts, contract details, error semantics, or rollout rules.
 - Preserve approved contracts unless `spec_pack.md` explicitly changes them.
-- Keep traceability from requirement or design intent to recorded task evidence and any required acceptance coverage.
+- keep traceability from source request or design intent to `spec_pack.md`, any required companion function spec or ADR, implementation refs, and recorded task evidence
+- when a governed pack needs implementation-facing detail for a dominant screen or module, API or service, batch or job, or report or import or export surface, use the matching active template instead of forcing one universal detail template
+- use ADRs under `docs/decisions/` only for meaningful cross-module, reusable, security, performance, ownership, or integration decisions; keep one-off local rationale in the governed task folder
 - Update machine-readable contracts in the same change when the feature pack changes API, DTO, file, or DB shape.
 - Keep the lightest process that still controls real risk.
 

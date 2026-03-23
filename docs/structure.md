@@ -12,6 +12,7 @@ docs/spec-packs/<feature-id>/
   review.md
   audit.md
   decisions.md
+  function-specs/  # optional companion specs
 ```
 
 ## Naming
@@ -43,6 +44,18 @@ Do not use alias task types such as `spec` or `code` in active governed work.
 | `review` | `spec_pack.md`, `review.md` | `review.md` must reference the originating `spec_pack.md`; `reinforcement.md` is required when the review is non-trivial |
 | `audit` | `spec_pack.md`, `audit.md` | `audit.md` must reference the originating `spec_pack.md`; no code changes; `reinforcement.md` is required when the audit is non-trivial |
 
+## Optional Companion Specs
+
+- use `function-specs/` only when `spec_pack.md` is too generic to describe the dominant delivery surface safely
+- keep companion specs inside the same governed task folder so traceability stays local to the governed work
+- use these filename patterns only:
+  - `<function-id>.screen-module.md`
+  - `<function-id>.api-service.md`
+  - `<function-id>.batch-job.md`
+  - `<function-id>.report-import-export.md`
+- each companion spec must reference the originating `spec_pack.md` and carry the minimum traceability fields from `docs/governance/traceability-policy.md`
+- companion specs do not replace `spec_pack.md`, `verification.md`, `review.md`, or `audit.md`
+
 ## Task Lifecycle Rules
 
 - one folder equals one primary governed task lifecycle rooted in `spec_pack.md`
@@ -55,6 +68,7 @@ spec_pack.md -> change work -> review.md -> audit.md
 - `verification.md` records change-making closeout for `implement`, `fix`, `docs`, and `hotfix`
 - `review.md` is downstream review evidence for the same governed task and must name the originating `spec_pack.md`
 - `audit.md` is downstream audit evidence for the same governed task and must name the originating `spec_pack.md`
+- companion function specs are supporting detail for the same governed task and must not become a second scope authority outside `spec_pack.md`
 - do not mix unrelated specs, reviews, or audits in the same folder
 - if the work changes to a different primary scope, create a new governed folder instead of overloading the existing one
 

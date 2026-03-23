@@ -22,6 +22,9 @@ Token efficiency is a rule. Start at the lowest load level that keeps the next s
 - read `docs/standards/api-rules.md` before changing API, DTO, response, file, or request shape
 - read `docs/standards/db-rules.md` and `docs/standards/schema_database.yaml` before DB-related analysis or changes
 - read `docs/standards/testing-rules.md` before final verification or review
+- read `docs/templates/README.md` and the matching function-spec template before authoring or reviewing companion function specs
+- read `docs/governance/traceability-policy.md` before authoring or reviewing function-spec traceability
+- read `docs/decisions/README.md` and `docs/templates/adr.template.md` when the work introduces a reusable or cross-module design choice
 
 ## Repository Anchors
 

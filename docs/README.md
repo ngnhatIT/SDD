@@ -9,6 +9,9 @@ Start here for the active lean SDD v2.5 framework.
 - Change closeout record: `spec-packs/<feature-id>/verification.md`
 - Review trace: `spec-packs/<feature-id>/review.md`
 - Audit trace: `spec-packs/<feature-id>/audit.md`
+- Function-spec templates: `templates/README.md`
+- Traceability policy: `governance/traceability-policy.md`
+- ADR policy and active ADRs: `decisions/README.md`
 - Task routing: `execution/task-routing.md`
 - Default AI read path: `execution/ai-loading-order.md`
 - Task folder contract: `structure.md`
@@ -24,7 +27,8 @@ Start here for the active lean SDD v2.5 framework.
 1. read `../AGENTS.md`
 2. identify or create the governed task home under `spec-packs/<feature-id>/`
 3. route the task through `execution/task-routing.md`
-4. run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial] [--strict]` before closeout
+4. if the pack needs function-level detail, choose the matching companion template from `templates/README.md`; if the change introduces a meaningful cross-cutting decision, check `decisions/README.md`
+5. run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial] [--strict]` before closeout
 
 ## Default Read Path
 

@@ -3,7 +3,7 @@
 - Status: accepted
 - Date: 2026-03-23
 - Owners: repository maintainers
-- Refined By: `ADR-0007-task-artifact-traceability.md`
+- Refined By: `ADR-0007-task-artifact-traceability.md`, `ADR-0008-function-type-specs-and-traceability.md`
 
 ## Context
 

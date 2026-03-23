@@ -60,3 +60,17 @@ Output: verification.md
 
 Create or revise `spec_pack.md` only when the governed docs task requires it. Keep the framework lean, enforceable, and explicit about scope, acceptance, lifecycle, and stop points. Update `verification.md`. Add `reinforcement.md` when the work is non-trivial or changes framework rules.
 ```
+
+## Author Companion Function Spec
+
+```text
+Task Type: docs
+Feature Pack: docs/spec-packs/<feature-id>/
+Standards: auto
+
+Mode: docs
+Target: docs/spec-packs/<feature-id>/function-specs/<function-id>.<type>.md
+Output: verification.md
+
+Keep `spec_pack.md` as the canonical scope document. Choose the matching function-spec template from `docs/templates/README.md`. Use `docs/governance/traceability-policy.md` for the trace block. Create or update an ADR only when the design choice is cross-module, reusable, security-impacting, performance-impacting, ownership-impacting, or integration-shaping.
+```
