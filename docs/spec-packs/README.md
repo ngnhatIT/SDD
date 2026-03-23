@@ -13,7 +13,9 @@ Use `../structure.md` for the layout, naming, and task-type file contract.
 - `audit.md` is required before final closeout for `audit`.
 - `decisions.md` is optional unless the feature has local design choices worth preserving.
 - if a governed task does not already have a feature-pack home for its required artifact, create or identify one before closing the work.
-- run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial]` before closeout to check the minimum artifact set.
+- run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial] [--strict]` before closeout to check the minimum artifact quality bar.
+
+- use `../governance/minimal-quality.md` when checking whether an artifact is too weak to close out.
 
 ## Legacy
 

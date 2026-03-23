@@ -2,6 +2,8 @@
 
 - Status: complete
 - Last Updated: 2026-03-23
+- Originating Spec: `docs/spec-packs/2026-03-23-frontend-architecture-audit/spec_pack.md`
+- Code Modified: no
 
 ## 1. Scope And Basis
 
@@ -22,13 +24,18 @@
 - analytics and logging: no runtime analytics SDK evidence found; logging is mostly `console.*` plus user-facing modal/error helpers
 - business context: authenticated warehouse/business-management SPA with login, portal, authorized sidebar navigation, and screens spanning products, ordering, purchase/returns, inventory, payment, CSV workflows, and access-log inquiry
 
-## 3. Follow-Up Or Residual Risks
+## 3. Compliance Status
+
+- `partial`
+- architecture findings are grounded, but test coverage and some contract confirmations remain incomplete
+
+## 4. Follow-Up Or Residual Risks
 
 - verify whether Angular Material, `ng-select`, and multiselect imports are dormant legacy or used through screens not sampled in depth
 - confirm whether the missing `src/test.ts` is an accidental break or the test command is effectively abandoned
 - shared base components and request wrappers remain high-impact review zones because many screens depend on them
 
-## 4. Confidence
+## 5. Confidence
 
 - high
 - the entrypoint, module, routing, templates, and service layer all align on one active Angular SPA with custom shared infrastructure

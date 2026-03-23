@@ -1,6 +1,6 @@
 # Documentation Home
 
-Start here for the active lean SDD v2.4 framework.
+Start here for the active lean SDD v2.5 framework.
 
 ## Main Paths
 
@@ -14,6 +14,7 @@ Start here for the active lean SDD v2.4 framework.
 - Task folder contract: `structure.md`
 - Operator prompts: `operator/quick-start-prompts.md`
 - Local validator: `../scripts/validate-task.py`
+- Lightweight gap checker: `../scripts/check-gap.py`
 - Cross-cutting rules: `governance/`
 - Implementation standards: `standards/`
 - Cross-cutting decisions: `decisions/`
@@ -23,7 +24,7 @@ Start here for the active lean SDD v2.4 framework.
 1. read `../AGENTS.md`
 2. identify or create the governed task home under `spec-packs/<feature-id>/`
 3. route the task through `execution/task-routing.md`
-4. run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial]` before closeout
+4. run `python scripts/validate-task.py docs/spec-packs/<feature-id> <task-type> [--non-trivial] [--strict]` before closeout
 
 ## Default Read Path
 
@@ -37,6 +38,10 @@ Start here for the active lean SDD v2.4 framework.
 8. `structure.md` when creating, validating, or closing a task folder
 9. only the standards needed for the task
 10. the task-specific trace artifact under `spec-packs/<feature-id>/`, such as `verification.md`, `review.md`, or `audit.md`, when resuming, reviewing, or closing
+
+## Optional Local Automation
+
+- install an optional pre-commit validator hook with `../scripts/install-validate-task-hook.sh docs/spec-packs/<feature-id> <task-type> [--non-trivial] [--strict]`
 
 ## Legacy
 

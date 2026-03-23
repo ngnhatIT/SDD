@@ -15,6 +15,7 @@ Load only what is needed for the next safe step.
 - `docs/execution/task-routing.md` when task type is unclear
 - `docs/execution/task-contracts.md` when deciding required outputs
 - `docs/structure.md` when creating, validating, or closing a task folder
+- `docs/governance/minimal-quality.md` when authoring or validating governed artifacts
 - `docs/standards/coding-rules.md` for code changes
 - `docs/standards/api-rules.md` for API, DTO, response, or file-shape changes
 - `docs/standards/db-rules.md` and `docs/standards/schema_database.yaml` for DB-related work

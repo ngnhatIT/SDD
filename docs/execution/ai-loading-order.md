@@ -7,7 +7,7 @@ Token efficiency is a rule. Start at the lowest load level that keeps the next s
 | Load Level | Read | Use When |
 | --- | --- | --- |
 | `minimal` | `AGENTS.md`, `docs/spec-packs/<feature-id>/spec_pack.md` when feature-scoped, this file, `docs/governance/core-rules.md` | first-pass triage, narrow `review`, narrow `audit`, minor text-only `docs` fixes |
-| `extended` | `minimal` plus `docs/execution/task-routing.md` when the header is unclear, `docs/governance/minimal-context.md`, `docs/execution/task-contracts.md`, `docs/spec-packs/<feature-id>/reinforcement.md` for non-trivial work, `docs/structure.md` when creating or validating a task folder, only the touched standards | default for `implement`, `fix`, `docs`, and `hotfix`; multi-file `review`; governed spec-pack authoring |
+| `extended` | `minimal` plus `docs/execution/task-routing.md` when the header is unclear, `docs/governance/minimal-context.md`, `docs/governance/minimal-quality.md` when validating artifact strength, `docs/execution/task-contracts.md`, `docs/spec-packs/<feature-id>/reinforcement.md` for non-trivial work, `docs/structure.md` when creating or validating a task folder, only the touched standards | default for `implement`, `fix`, `docs`, and `hotfix`; multi-file `review`; governed spec-pack authoring |
 | `full` | `extended` plus the active task artifact (`verification.md`, `review.md`, or `audit.md`), related decisions, and targeted archived comparison only if active docs still leave a gap | framework changes, cross-module work, DB or API changes, ambiguous requests, or final closeout |
 
 ## Task Map

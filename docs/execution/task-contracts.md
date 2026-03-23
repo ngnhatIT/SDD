@@ -15,7 +15,7 @@
 ## Review
 
 - input: feature pack, diff or code target, relevant standards, `reinforcement.md` if non-trivial
-- output: updated `review.md` with findings first, then assumptions or uncertainties and residual risks
+- output: updated `review.md` with explicit reference to the originating `spec_pack.md`, findings first, then assumptions or uncertainties and residual risks
 - stop if intent cannot be grounded from the active pack or code
 
 ## Docs
@@ -27,7 +27,7 @@
 ## Audit
 
 - input: target scope, active rules, inspected evidence, `reinforcement.md` if non-trivial, and a governed feature-pack home before closeout
-- output: updated `audit.md` with grounded report only and an explicit no-code-modified statement
+- output: updated `audit.md` with explicit reference to the originating `spec_pack.md`, grounded report only, and an explicit no-code-modified statement
 - stop if the user has implicitly asked for implementation and the task is blocked on a missing pack
 
 ## Hotfix
@@ -46,8 +46,8 @@
 ## Structure And Validation
 
 - use `docs/structure.md` when creating, renaming, or validating a task folder
-- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial]` before closeout to check the minimum artifact set
-- the validator is a floor, not the full governance model
+- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial] [--strict]` before closeout to check the minimum artifact quality bar
+- the validator is a floor for artifact quality and traceability, not the full governance model
 
 ## Checklist Use
 

@@ -19,7 +19,7 @@
 - `spec_pack.md` is the canonical feature artifact.
 - `reinforcement.md` is mandatory for non-trivial work.
 - a task-specific Markdown artifact is required before final closeout: `verification.md` for `implement`, `fix`, `docs`, and `hotfix`; `review.md` for `review`; `audit.md` for `audit`
-- `docs/structure.md` is the task-folder naming and artifact-placement contract.
+- `docs/structure.md` is the task-folder naming, lifecycle, and artifact-placement contract.
 - Do not guess missing behavior, schema facts, contract details, error semantics, or rollout rules.
 - Preserve approved contracts unless `spec_pack.md` explicitly changes them.
 - Keep traceability from requirement or design intent to recorded task evidence and any required acceptance coverage.
@@ -51,8 +51,9 @@ Treat the work as non-trivial when any of these are true:
 
 ## Validation Floor
 
-- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial]` before closeout when the task has a governed folder
-- the validator checks minimum artifact presence only; it does not waive any other stop rule
+- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial] [--strict]` before closeout when the task has a governed folder
+- use `docs/governance/minimal-quality.md` as the binary reference for artifact strength
+- the validator checks minimum artifact quality and lifecycle traceability only; it does not waive any other stop rule
 
 ## Stop Rules
 

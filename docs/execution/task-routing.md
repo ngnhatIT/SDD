@@ -16,9 +16,9 @@ Standards: auto | docs/standards/<file>[, docs/standards/<file>...]
 | --- | --- | --- | --- |
 | `implement` | approved new work should be built | `spec_pack.md`, relevant standards, `reinforcement.md` if non-trivial | repo change plus updated `verification.md` |
 | `fix` | scoped repair or follow-up should be applied | `spec_pack.md` or grounded bug scope, relevant standards, `reinforcement.md` if non-trivial | targeted fix plus updated `verification.md` |
-| `review` | findings are required before changes or approval | `spec_pack.md`, relevant standards, current diff or code, `reinforcement.md` if non-trivial | findings-first `review.md` |
+| `review` | findings are required before changes or approval | originating `spec_pack.md`, relevant standards, current diff or code, `reinforcement.md` if non-trivial | findings-first `review.md` with spec traceability |
 | `docs` | docs or framework changes only, including governed `spec_pack.md` authoring | relevant docs, relevant pack when governed, `reinforcement.md` if non-trivial or if the docs change execution rules | updated docs plus updated `verification.md` |
-| `audit` | inspect and report without changing code | relevant pack or scoped target, code, standards, and `reinforcement.md` if non-trivial | grounded `audit.md` only |
+| `audit` | inspect and report without changing code | originating `spec_pack.md`, code, standards, and `reinforcement.md` if non-trivial | grounded `audit.md` with spec traceability only |
 | `hotfix` | urgent, narrow remediation is required | compact `spec_pack.md`, `reinforcement.md`, relevant standards | smallest safe fix plus updated `verification.md` and follow-up note |
 
 ## Routing Rules
@@ -32,8 +32,8 @@ Standards: auto | docs/standards/<file>[, docs/standards/<file>...]
 
 ## Validation
 
-- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial]` before closeout to check the minimum artifact set
-- the validator is intentionally minimal and does not replace `spec_pack.md`, `reinforcement.md`, standards, or stop rules
+- run `python scripts/validate-task.py <task-folder> <task-type> [--non-trivial] [--strict]` before closeout to check the minimum artifact quality bar
+- the validator is intentionally heuristic and does not replace `spec_pack.md`, `reinforcement.md`, standards, or stop rules
 
 ## Next Reads
 

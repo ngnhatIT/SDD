@@ -2,6 +2,7 @@
 
 - Status: in-progress | complete
 - Last Updated: YYYY-MM-DD
+- Originating Spec: `spec_pack.md`
 
 ## 1. Scope Reviewed
 
