@@ -2,21 +2,26 @@
 
 ## Implement
 
-- input: `spec_pack.md`, relevant standards, `reinforcement.md` for non-trivial work
-- output: code or docs changes, updated `verification.md`, explicit acceptance coverage
+- input: `spec_pack.md`, relevant standards, `docs/standards/codebase-conformance-rules.md` when the work chooses or validates local-family shape, and `reinforcement.md` for non-trivial work
+- output: code or docs changes, updated `verification.md`, explicit acceptance coverage, and preserved local-family shape or an explicitly recorded approved exception
 - stop if the pack does not authorize the visible change
+- stop if the local family anchors, sibling pattern, or shared reuse path cannot be grounded safely
+- stop if the change would introduce an unapproved naming, package, layer, or source-family pattern
 
 ## Fix
 
-- input: grounded defect or review finding, relevant feature pack when behavior is governed, relevant standards
-- output: scoped repair, updated `verification.md`, explicit note of what was not changed
+- input: grounded defect or review finding, relevant feature pack when behavior is governed, relevant standards, and `docs/standards/codebase-conformance-rules.md` when the fix chooses or validates local-family shape
+- output: scoped repair, updated `verification.md`, explicit note of what was not changed, and preserved local-family shape or an explicitly recorded approved exception
 - stop if the fix would widen scope beyond the grounded problem
+- stop if the local family anchors, sibling pattern, or shared reuse path cannot be grounded safely
+- stop if the fix would introduce an unapproved naming, package, layer, or source-family pattern
 
 ## Review
 
-- input: feature pack, diff or code target, relevant standards, `reinforcement.md` if non-trivial
-- output: updated `review.md` with explicit reference to the originating `spec_pack.md`, findings first, then assumptions or uncertainties and residual risks
+- input: feature pack, diff or code target, relevant standards, `docs/standards/codebase-conformance-rules.md` when findings depend on code-shape choices, and `reinforcement.md` if non-trivial
+- output: updated `review.md` with explicit reference to the originating `spec_pack.md`, findings first, then assumptions or uncertainties and residual risks, including conformance findings for silent new layers, silent new naming patterns, missed reuse, or sibling-family drift when observed
 - stop if intent cannot be grounded from the active pack or code
+- stop if the chosen family pattern cannot be defended from anchors and inspected code
 
 ## Docs
 

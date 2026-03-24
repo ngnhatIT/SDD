@@ -20,6 +20,7 @@ Load only what is needed for the next safe step.
 - `docs/governance/traceability-policy.md` when authoring or reviewing traceability beyond the pack summary
 - `docs/decisions/README.md` and `docs/templates/adr.template.md` when the work may create or revise a repository ADR
 - `docs/standards/coding-rules.md` for code changes
+- `docs/standards/codebase-conformance-rules.md` for `implement`, `fix`, or `review` work that must choose between local patterns or decide whether to create a new abstraction
 - `docs/standards/api-rules.md` for API, DTO, response, or file-shape changes
 - `docs/standards/db-rules.md` and `docs/standards/schema_database.yaml` for DB-related work
 - `docs/standards/testing-rules.md` when planning or reviewing verification
